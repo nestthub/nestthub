@@ -14,12 +14,12 @@
 <div align="center">
 
 <a href="https://github.com/nestthub/v2hub-core"><img src="https://github-readme-stats-eight-theta.vercel.app/api/pin/?username=nestthub&repo=v2hub-core&theme=dark&bg_color=0D1117&border_color=2ECC71&hide_border=false" /></a>
-<a href="https://github.com/nestthub/v2hub-panel"><img src="https://github-readme-stats-eight-theta.vercel.app/api/pin/?username=nestthub&repo=v2hub-panel&theme=dark&bg_color=0D1117&border_color=2ECC71&hide_border=false" /></a>
 
 <a href="https://github.com/nestthub/v2hub-cli"><img src="https://github-readme-stats-eight-theta.vercel.app/api/pin/?username=nestthub&repo=v2hub-cli&theme=dark&bg_color=0D1117&border_color=2ECC71&hide_border=false" /></a>
 <a href="https://github.com/nestthub/v2hub-admin"><img src="https://github-readme-stats-eight-theta.vercel.app/api/pin/?username=nestthub&repo=v2hub-admin&theme=dark&bg_color=0D1117&border_color=2ECC71&hide_border=false" /></a>
 
 <a href="https://github.com/nestthub/v2hub-bot"><img src="https://github-readme-stats-eight-theta.vercel.app/api/pin/?username=nestthub&repo=v2hub-bot&theme=dark&bg_color=0D1117&border_color=2ECC71&hide_border=false" /></a>
+<a href="https://github.com/nestthub/v2hub-panel"><img src="https://github-readme-stats-eight-theta.vercel.app/api/pin/?username=nestthub&repo=v2hub-panel&theme=dark&bg_color=0D1117&border_color=2ECC71&hide_border=false" /></a>
 
 </div>
 
