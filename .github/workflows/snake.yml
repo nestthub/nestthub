@@ -1,0 +1,47 @@
+name: Generate Snake
+
+on:
+  schedule:
+    - cron: "0 */12 * * *" # every 12 hours
+  workflow_dispatch: {}
+  push:
+    branches:
+      - main
+
+jobs:
+  generate:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: Platane/snk@v3
+        id: snake-gif
+        with:
+          github_user_name: nestthub
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+
+      - name: publish to output branch
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+
+          # make sure the output branch exists remotely; create it if not
+          if git ls-remote --exit-code --heads origin output; then
+            git fetch origin output
+            git worktree add out-branch origin/output
+          else
+            git worktree add --orphan -b output out-branch
+          fi
+
+          # clear old files and copy the freshly generated ones
+          rm -rf out-branch/*.svg
+          cp dist/*.svg out-branch/
+
+          cd out-branch
+          git add -A
+          git commit -m "generate snake" || echo "nothing to commit"
+          git push origin HEAD:output
