@@ -25,7 +25,7 @@
 
 | Repository       | Status                           | Description                                                                                                                                                       |
 | ---------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **v2hub-server** | 🔒 Private — public release soon | Core API — FastAPI, PostgreSQL, Redis, Celery. Multi-source aggregation, recursive subscription resolution, HMAC-signed admin endpoints, full observability stack |
+| **v2hub-api** | 🔒 Private — public release soon | Core API — FastAPI, PostgreSQL, Redis, Celery. Multi-source aggregation, recursive subscription resolution, HMAC-signed admin endpoints, full observability stack |
 | **v2hub-core**   | Public                           | Shared business logic, API models, and reusable platform components                                                                                               |
 | **v2hub-panel**  | Public                           | Web mini-app for managing subscriptions and sources — FastAPI + vanilla JS                                                                                        |
 | **v2hub-cli**    | Public                           | Terminal client built on Typer and Rich for managing services from the command line                                                                               |
@@ -36,7 +36,7 @@
 
 ## Highlights
 
-**v2hub-server — VPN Subscription API**
+**v2hub-api — VPN Subscription API**
 FastAPI core with SQLAlchemy 2.0 (async) and asyncpg, PostgreSQL + Redis two-tier caching, Celery background refresh every 15 minutes. Recursive subscription resolution with circular-reference detection and configurable nesting depth. HMAC-SHA256 signed admin endpoints, IP whitelisting, Redis-backed rate limiting, automatic IP banning. Full observability stack — Prometheus, Loki, Grafana, Alloy. Currently private; scheduled for public release.
 
 **v2hub-panel — Web Mini App**
