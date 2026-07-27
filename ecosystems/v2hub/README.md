@@ -25,7 +25,7 @@
 
 | Repository       | Status                           | Description                                                                                                                                                       |
 | ---------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **v2hub-api** | 🔒 Private — public release soon | Core API — FastAPI, PostgreSQL, Redis, Celery. Multi-source aggregation, recursive subscription resolution, HMAC-signed admin endpoints, full observability stack |
+| **v2hub-api** | Public                              | Core API — FastAPI, PostgreSQL, Redis, Celery. Multi-source aggregation, recursive subscription resolution, HMAC-signed admin endpoints, full observability stack |
 | **v2hub-core**   | Public                           | Shared business logic, API models, and reusable platform components                                                                                               |
 | **v2hub-panel**  | Public                           | Web mini-app for managing subscriptions and sources — FastAPI + vanilla JS                                                                                        |
 | **v2hub-cli**    | Public                           | Terminal client built on Typer and Rich for managing services from the command line                                                                               |
