@@ -111,23 +111,6 @@ VPN subscription management platform — server core, SDK, CLI, admin module, an
 
 </div>
 
-<br>
-
-## 🚀 Highlights
-
-**High-Load Telegram Service**
-Migrated a monolith to a distributed architecture on Kafka/Redpanda and Redis Queue. CPU utilization: 100% → 30–60% → 6–15% after full migration.
-
-**VPN Subscription Bot**
-Marzban API integration, automated config and QR generation, subscription lifecycle automation.
-
-**Algorithmic Trading Bots**
-Bybit API integration, real-time market data processing, order execution engine.
-
-**Telegram Marketplace Bot**
-aiogram-based auction system with race-condition-safe state management.
-
-<br>
 
 ## 📊 GitHub Stats
 
