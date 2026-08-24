@@ -97,6 +97,7 @@ HMAC-SHA256
 <img src="https://img.shields.io/badge/Event--Driven-9B59B6?style=flat-square" />
 <img src="https://img.shields.io/badge/REST%20API-3498DB?style=flat-square" />
 <img src="https://img.shields.io/badge/RBAC-F39C12?style=flat-square" />
+<img src="https://img.shields.io/badge/AsyncIO-3776AB?style=flat-square" />
 </div>
 
 <br>
