@@ -3,7 +3,7 @@
 <h1>V2Hub Ecosystem</h1>
 <h3>VPN Subscription Management Platform</h3>
 
-<p>API server, client library, CLI, admin library, Telegram bot, and web panel as a single ecosystem.</p>
+<p>API server, client library, CLI, admin library, Telegram bot, web panel, and documentation as a single ecosystem.</p>
 
 </div>
 
@@ -19,6 +19,8 @@
 
 <a href="https://github.com/nestthub/v2hub-bot"><img src="https://github-readme-stats-eight-theta.vercel.app/api/pin/?username=nestthub&repo=v2hub-bot&theme=dark&bg_color=0D1117&border_color=2ECC71&hide_border=false" /></a> <a href="https://github.com/nestthub/v2hub-core"><img src="https://github-readme-stats-eight-theta.vercel.app/api/pin/?username=nestthub&repo=v2hub-core&theme=dark&bg_color=0D1117&border_color=2ECC71&hide_border=false" /></a>
 
+<a href="https://github.com/nestthub/v2hub-docs"><img src="https://github-readme-stats-eight-theta.vercel.app/api/pin/?username=nestthub&repo=v2hub-docs&theme=dark&bg_color=0D1117&border_color=2ECC71&hide_border=false" /></a>
+
 </div>
 
 | Repository      | Status | Description                                                                                                                                                                                |
@@ -29,6 +31,7 @@
 | **v2hub-cli**   | Public | Convenient command-line client for working with **v2hub-api**, built around **v2hub-core**.                                                                                                |
 | **v2hub-bot**   | Public | Telegram bot for self-service subscription management — issues access tokens, provides access to the web panel, and allows users to manage tokens and providers.                           |
 | **v2hub-panel** | Public | Web panel for managing subscriptions and providers, built around **v2hub-core**.                                                                                                           |
+| **v2hub-docs**  | Public | Documentation site for the whole V2Hub ecosystem — installation, guides, and API reference for **v2hub-core**, **v2hub-admin**, and **v2hub-cli**.                                        |
 
 <br>
 
@@ -74,6 +77,14 @@ A web interface for managing V2Hub subscriptions and providers.
 
 The panel is built around **v2hub-core** and provides a convenient browser-based interface for users to manage their subscriptions and configured providers.
 
+### **v2hub-docs — Documentation**
+
+The documentation site for the entire V2Hub ecosystem.
+
+It covers getting started, task-oriented guides (client integration, authentication, subscriptions, providers, administration, CLI workflows, error handling, and production usage), and complete API references for **v2hub-core**, **v2hub-admin**, and **v2hub-cli**.
+
+**v2hub-docs is built with Zensical** and is the recommended starting point for anyone integrating with V2Hub.
+
 <br>
 
 ## Architecture
@@ -81,7 +92,7 @@ The panel is built around **v2hub-core** and provides a convenient browser-based
 ```text
                          ┌─────────────────────┐
                          │     v2hub-api       │
-                         │    V2Hub Server      │
+                         │    V2Hub Server     │
                          │                     │
                          │ FastAPI             │
                          │ PostgreSQL          │
@@ -112,6 +123,14 @@ The panel is built around **v2hub-core** and provides a convenient browser-based
                          ┌─────────────────────┐
                          │      v2hub-bot      │
                          │   Telegram Bot      │
+                         └─────────────────────┘
+
+                         ┌─────────────────────┐
+                         │      v2hub-docs     │
+                         │   Documentation     │
+                         │  (v2hub-core,       │
+                         │   v2hub-admin,      │
+                         │   v2hub-cli)        │
                          └─────────────────────┘
 ```
 
