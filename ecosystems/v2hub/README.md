@@ -19,19 +19,20 @@
 
 <a href="https://github.com/nestthub/v2hub-bot"><img src="https://github-readme-stats-eight-theta.vercel.app/api/pin/?username=nestthub&repo=v2hub-bot&theme=dark&bg_color=0D1117&border_color=2ECC71&hide_border=false" /></a> <a href="https://github.com/nestthub/v2hub-core"><img src="https://github-readme-stats-eight-theta.vercel.app/api/pin/?username=nestthub&repo=v2hub-core&theme=dark&bg_color=0D1117&border_color=2ECC71&hide_border=false" /></a>
 
-<a href="https://github.com/nestthub/v2hub-docs"><img src="https://github-readme-stats-eight-theta.vercel.app/api/pin/?username=nestthub&repo=v2hub-docs&theme=dark&bg_color=0D1117&border_color=2ECC71&hide_border=false" /></a>
+<a href="https://github.com/nestthub/v2hub-docs"><img src="https://github-readme-stats-eight-theta.vercel.app/api/pin/?username=nestthub&repo=v2hub-docs&theme=dark&bg_color=0D1117&border_color=2ECC71&hide_border=false" /></a> <a href="https://github.com/nestthub/v2hub-api-docs"><img src="https://github-readme-stats-eight-theta.vercel.app/api/pin/?username=nestthub&repo=v2hub-api-docs&theme=dark&bg_color=0D1117&border_color=2ECC71&hide_border=false" /></a>
 
 </div>
 
-| Repository      | Status | Description                                                                                                                                                                                |
-| --------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **v2hub-api**   | Public | Main V2Hub repository containing the complete server-side implementation — API, database, caching, background tasks, subscription processing, administration endpoints, and observability. |
-| **v2hub-core**  | Public | Main client library for working with the V2Hub API. Provides shared models, API clients, and reusable components for building V2Hub integrations.                                          |
-| **v2hub-admin** | Public | Administration library for **v2hub-api**. Used when deploying and operating your own V2Hub server.                                                                                         |
-| **v2hub-cli**   | Public | Convenient command-line client for working with **v2hub-api**, built around **v2hub-core**.                                                                                                |
-| **v2hub-bot**   | Public | Telegram bot for self-service subscription management — issues access tokens, provides access to the web panel, and allows users to manage tokens and providers.                           |
-| **v2hub-panel** | Public | Web panel for managing subscriptions and providers, built around **v2hub-core**.                                                                                                           |
-| **v2hub-docs**  | Public | Documentation site for the whole V2Hub ecosystem — installation, guides, and API reference for **v2hub-core**, **v2hub-admin**, and **v2hub-cli**.                                        |
+| Repository          | Status | Description                                                                                                                                                                                |
+| -------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **v2hub-api**        | Public | Main V2Hub repository containing the complete server-side implementation — API, database, caching, background tasks, subscription processing, administration endpoints, and observability. |
+| **v2hub-core**       | Public | Main client library for working with the V2Hub API. Provides shared models, API clients, and reusable components for building V2Hub integrations.                                          |
+| **v2hub-admin**      | Public | Administration library for **v2hub-api**. Used when deploying and operating your own V2Hub server.                                                                                         |
+| **v2hub-cli**        | Public | Convenient command-line client for working with **v2hub-api**, built around **v2hub-core**.                                                                                                |
+| **v2hub-bot**        | Public | Telegram bot for self-service subscription management — issues access tokens, provides access to the web panel, and allows users to manage tokens and providers.                           |
+| **v2hub-panel**      | Public | Web panel for managing subscriptions and providers, built around **v2hub-core**.                                                                                                           |
+| **v2hub-docs**       | Public | Documentation site for the whole V2Hub ecosystem — installation, guides, and API reference for **v2hub-core**, **v2hub-admin**, and **v2hub-cli**.                                        |
+| **v2hub-api-docs**   | Public | Official reference documentation for the raw **v2hub-api** HTTP endpoints — authentication, rate limiting, admin models, and request/response schemas, independent of any client library.   |
 
 <br>
 
@@ -85,6 +86,14 @@ It covers getting started, task-oriented guides (client integration, authenticat
 
 **v2hub-docs is built with Zensical** and is the recommended starting point for anyone integrating with V2Hub.
 
+### **v2hub-api-docs — API Reference**
+
+Official reference documentation for the **v2hub-api** server itself — the HTTP endpoints and JSON payloads directly, independent of **v2hub-core**.
+
+It covers authentication (user, provider, and HMAC-signed admin auth), rate limiting, public/subscription/user/provider/admin endpoints, error codes, and every request/response model.
+
+**v2hub-api-docs is built with Zensical** and is the recommended reference for anyone integrating with the API directly rather than through the Python client.
+
 <br>
 
 ## Architecture
@@ -131,6 +140,12 @@ It covers getting started, task-oriented guides (client integration, authenticat
                          │  (v2hub-core,       │
                          │   v2hub-admin,      │
                          │   v2hub-cli)        │
+                         └─────────────────────┘
+
+                         ┌─────────────────────┐
+                         │   v2hub-api-docs    │
+                         │    API Reference    │
+                         │    (v2hub-api)      │
                          └─────────────────────┘
 ```
 
