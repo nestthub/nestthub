@@ -1,158 +1,137 @@
 <div align="center">
 
-<h1>V2Hub Ecosystem</h1>
-<h3>VPN Subscription Management Platform</h3>
+<h1>nestt</h1>
+<h3>Python Backend Developer — High-Load & Async Systems</h3>
 
-<p>API server, client library, CLI, admin library, Telegram bot, web panel, and documentation as a single ecosystem.</p>
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=20&duration=3000&pause=1200&color=2ECC71&center=true&vCenter=true&width=680&lines=Async+backend+services+in+Python;FastAPI+%2B+PostgreSQL+%2B+Redis+%2B+Kafka;Monolith+%E2%86%92+distributed+systems;VPN+infrastructure+%7C+trading+systems+%7C+Telegram+platforms" alt="Typing SVG" />
+
+<br>
+
+<img src="https://komarev.com/ghpvc/?username=nestthub&label=Profile+Views&color=2ECC71&style=flat-square" alt="profile views" />
+<a href="https://t.me/nestt"><img src="https://img.shields.io/badge/Telegram-@nestt-2CA5E0?style=flat-square&logo=telegram&logoColor=white" /></a>
+
+<br><br>
+
+<img src="https://raw.githubusercontent.com/nestthub/nestthub/output/github-contribution-grid-snake-dark.svg" width="90%" />
 
 </div>
 
 <br>
 
-## Repositories
+## 👋 About
+
+Backend developer focused on designing, building, and operating high-load services, microservice systems, and full-cycle products in production.
+
+Specializing in asynchronous server-side applications and distributed systems in Python — async pipelines, message queues, caching, and external API integration. Practical experience migrating monolithic systems to service-oriented architectures, with production results reducing CPU utilization from 100% to 6–15% under real load.
+
+Currently building **v2hub** — a VPN subscription management platform with a FastAPI server core, client SDK, CLI, admin module, and web panel.
+
+<br>
+
+## 🧰 Stack
 
 <div align="center">
-
-<a href="https://github.com/nestthub/v2hub-api"><img src="https://github-readme-stats-eight-theta.vercel.app/api/pin/?username=nestthub&repo=v2hub-api&theme=dark&bg_color=0D1117&border_color=2ECC71&hide_border=false" /></a> <a href="https://github.com/nestthub/v2hub-panel"><img src="https://github-readme-stats-eight-theta.vercel.app/api/pin/?username=nestthub&repo=v2hub-panel&theme=dark&bg_color=0D1117&border_color=2ECC71&hide_border=false" /></a>
-
-<a href="https://github.com/nestthub/v2hub-cli"><img src="https://github-readme-stats-eight-theta.vercel.app/api/pin/?username=nestthub&repo=v2hub-cli&theme=dark&bg_color=0D1117&border_color=2ECC71&hide_border=false" /></a> <a href="https://github.com/nestthub/v2hub-admin"><img src="https://github-readme-stats-eight-theta.vercel.app/api/pin/?username=nestthub&repo=v2hub-admin&theme=dark&bg_color=0D1117&border_color=2ECC71&hide_border=false" /></a>
-
-<a href="https://github.com/nestthub/v2hub-bot"><img src="https://github-readme-stats-eight-theta.vercel.app/api/pin/?username=nestthub&repo=v2hub-bot&theme=dark&bg_color=0D1117&border_color=2ECC71&hide_border=false" /></a> <a href="https://github.com/nestthub/v2hub-core"><img src="https://github-readme-stats-eight-theta.vercel.app/api/pin/?username=nestthub&repo=v2hub-core&theme=dark&bg_color=0D1117&border_color=2ECC71&hide_border=false" /></a>
-
-<a href="https://github.com/nestthub/v2hub-docs"><img src="https://github-readme-stats-eight-theta.vercel.app/api/pin/?username=nestthub&repo=v2hub-docs&theme=dark&bg_color=0D1117&border_color=2ECC71&hide_border=false" /></a> <a href="https://github.com/nestthub/v2hub-api-docs"><img src="https://github-readme-stats-eight-theta.vercel.app/api/pin/?username=nestthub&repo=v2hub-api-docs&theme=dark&bg_color=0D1117&border_color=2ECC71&hide_border=false" /></a>
-
+<img src="https://skillicons.dev/icons?i=python,fastapi,postgres,redis,docker,kafka,git,linux,cpp,c,nginx&perline=11" />
 </div>
 
-| Repository          | Status | Description                                                                                                                                                                                |
-| -------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **v2hub-api**        | Public | Main V2Hub repository containing the complete server-side implementation — API, database, caching, background tasks, subscription processing, administration endpoints, and observability. |
-| **v2hub-core**       | Public | Main client library for working with the V2Hub API. Provides shared models, API clients, and reusable components for building V2Hub integrations.                                          |
-| **v2hub-admin**      | Public | Administration library for **v2hub-api**. Used when deploying and operating your own V2Hub server.                                                                                         |
-| **v2hub-cli**        | Public | Convenient command-line client for working with **v2hub-api**, built around **v2hub-core**.                                                                                                |
-| **v2hub-bot**        | Public | Telegram bot for self-service subscription management — issues access tokens, provides access to the web panel, and allows users to manage tokens and providers.                           |
-| **v2hub-panel**      | Public | Web panel for managing subscriptions and providers, built around **v2hub-core**.                                                                                                           |
-| **v2hub-docs**       | Public | Documentation site for the whole V2Hub ecosystem — installation, guides, and API reference for **v2hub-core**, **v2hub-admin**, and **v2hub-cli**.                                        |
-| **v2hub-api-docs**   | Public | Official reference documentation for the raw **v2hub-api** HTTP endpoints — authentication, rate limiting, admin models, and request/response schemas, independent of any client library.   |
-
 <br>
 
-## Highlights
+<table align="center">
+<tr>
+<td valign="top" width="33%">
 
-### **v2hub-api — V2Hub Server**
+**Languages**
 
-The main repository of the V2Hub ecosystem. It contains the complete server-side implementation of the platform: FastAPI application, SQLAlchemy 2.0 with asyncpg, PostgreSQL, Redis, Celery background tasks, subscription processing, provider aggregation, caching, administration endpoints, and observability.
-
-The server supports multi-source aggregation and recursive subscription resolution with circular-reference detection and configurable nesting depth. It also provides HMAC-SHA256 signed administration endpoints, IP whitelisting, Redis-backed rate limiting, automatic IP banning, and a full observability stack with Prometheus, Loki, Grafana, and Alloy.
-
-### **v2hub-core — Client Library**
-
-The main library for working with the V2Hub API.
-
-It provides the API client, models, and reusable components required to build applications and integrations on top of **v2hub-api**.
-
-Other V2Hub applications can use **v2hub-core** instead of implementing API communication and common functionality from scratch.
-
-### **v2hub-admin — Administration Library**
-
-Administration library for **v2hub-api**.
-
-It provides the functionality required to administer your own V2Hub server, including administrative operations and access control.
-
-**v2hub-admin is intended for self-hosted V2Hub deployments.**
-
-### **v2hub-cli — Command-Line Client**
-
-A convenient terminal client for working with **v2hub-api**.
-
-The CLI is built around **v2hub-core**, providing a convenient command-line interface for managing subscriptions, providers, tokens, and administrative operations.
-
-### **v2hub-bot — Telegram Bot**
-
-A Telegram bot for convenient self-service management of V2Hub subscriptions.
-
-The bot can issue access tokens, provide users with access to the web panel, and allow them to manage their tokens and providers directly through Telegram.
-
-### **v2hub-panel — Web Panel**
-
-A web interface for managing V2Hub subscriptions and providers.
-
-The panel is built around **v2hub-core** and provides a convenient browser-based interface for users to manage their subscriptions and configured providers.
-
-### **v2hub-docs — Documentation**
-
-The documentation site for the entire V2Hub ecosystem.
-
-It covers getting started, task-oriented guides (client integration, authentication, subscriptions, providers, administration, CLI workflows, error handling, and production usage), and complete API references for **v2hub-core**, **v2hub-admin**, and **v2hub-cli**.
-
-**v2hub-docs is built with Zensical** and is the recommended starting point for anyone integrating with V2Hub.
-
-### **v2hub-api-docs — API Reference**
-
-Official reference documentation for the **v2hub-api** server itself — the HTTP endpoints and JSON payloads directly, independent of **v2hub-core**.
-
-It covers authentication (user, provider, and HMAC-signed admin auth), rate limiting, public/subscription/user/provider/admin endpoints, error codes, and every request/response model.
-
-**v2hub-api-docs is built with Zensical** and is the recommended reference for anyone integrating with the API directly rather than through the Python client.
-
-<br>
-
-## Architecture
-
-```text
-                         ┌─────────────────────┐
-                         │     v2hub-api       │
-                         │    V2Hub Server     │
-                         │                     │
-                         │ FastAPI             │
-                         │ PostgreSQL          │
-                         │ Redis               │
-                         │ Celery              │
-                         └──────────┬──────────┘
-                                    │
-                       V2Hub API    │
-                                    │
-                         ┌──────────▼──────────┐
-                         │     v2hub-core      │
-                         │    Client Library   │
-                         └─────┬────────┬──────┘
-                               │        │
-                     ┌─────────┘        └─────────┐
-                     │                            │
-              ┌──────▼──────┐              ┌──────▼──────┐
-              │  v2hub-cli  │              │ v2hub-panel │
-              │     CLI     │              │  Web Panel  │
-              └─────────────┘              └─────────────┘
-
-                         ┌─────────────────────┐
-                         │    v2hub-admin      │
-                         │  Admin Library for  │
-                         │     v2hub-api       │
-                         └─────────────────────┘
-
-                         ┌─────────────────────┐
-                         │      v2hub-bot      │
-                         │   Telegram Bot      │
-                         └─────────────────────┘
-
-                         ┌─────────────────────┐
-                         │      v2hub-docs     │
-                         │   Documentation     │
-                         │  (v2hub-core,       │
-                         │   v2hub-admin,      │
-                         │   v2hub-cli)        │
-                         └─────────────────────┘
-
-                         ┌─────────────────────┐
-                         │   v2hub-api-docs    │
-                         │    API Reference    │
-                         │    (v2hub-api)      │
-                         └─────────────────────┘
+```
+Python · C · C++ · SQL
 ```
 
+**Frameworks**
+
+```
+FastAPI · aiogram · AsyncIO
+SQLAlchemy 2.0 · Pydantic
+```
+
+</td>
+<td valign="top" width="33%">
+
+**Data & Messaging**
+
+```
+PostgreSQL · Redis
+Kafka · Redpanda
+```
+
+**Infrastructure**
+
+```
+Docker · Nginx · Linux
+Alembic · Git · CI/CD
+```
+
+</td>
+<td valign="top" width="33%">
+
+**Observability**
+
+```
+Prometheus · Grafana
+Loki · Grafana Alloy
+```
+
+**Security**
+
+```
+RBAC · SSRF Protection
+HMAC-SHA256
+```
+
+</td>
+</tr>
+</table>
+
+<div align="center">
+<img src="https://img.shields.io/badge/Microservices-2ECC71?style=flat-square" />
+<img src="https://img.shields.io/badge/Highload-E74C3C?style=flat-square" />
+<img src="https://img.shields.io/badge/Event--Driven-9B59B6?style=flat-square" />
+<img src="https://img.shields.io/badge/REST%20API-3498DB?style=flat-square" />
+<img src="https://img.shields.io/badge/RBAC-F39C12?style=flat-square" />
+<img src="https://img.shields.io/badge/AsyncIO-3776AB?style=flat-square" />
+</div>
+
 <br>
+
+## 🧩 V2Hub Ecosystem
+
+VPN subscription management platform — server core, SDK, CLI, admin module, and web panel as a single system.
 
 <div align="center">
 
-[← Back to profile](../../README.md)
+[![View Ecosystem](https://img.shields.io/badge/View_Full_Ecosystem-2ECC71?style=for-the-badge&logo=github&logoColor=white)](ecosystems/v2hub/README.md)
 
 </div>
+
+
+## 📊 GitHub Stats
+
+<div align="center">
+
+<img src="https://github-readme-stats-eight-theta.vercel.app/api?username=nestthub&show_icons=true&theme=dark&bg_color=0D1117&border_color=2ECC71&icon_color=2ECC71&hide_border=false" width="48%" />
+<img src="https://streak-stats.demolab.com/?user=nestthub&theme=dark&background=0D1117&border=2ECC71&ring=2ECC71&fire=2ECC71" width="48%" />
+
+<img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=nestthub&layout=compact&theme=dark&bg_color=0D1117&border_color=2ECC71&hide_border=false" width="45%" />
+
+</div>
+
+<br>
+
+## 📬 Contact
+
+<div align="center">
+<a href="https://t.me/nestt"><img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" /></a>
+</div>
+
+<br>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=2ECC71&height=90&section=footer" width="100%" />
